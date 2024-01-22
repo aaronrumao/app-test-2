@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  app-test-2:
+    build:
+      context: .
+    environment:
+      # All Environments.
+      APP_PORT: 7000
+      FRONTEND_URL: ''
+    ports:
+      - '7000:7000'
+    networks:
+      - test-network
+
+
+networks:
+  test-network:
+    driver: bridge
